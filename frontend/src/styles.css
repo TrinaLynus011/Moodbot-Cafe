@@ -1,0 +1,22 @@
+body { background: linear-gradient(180deg,#fcfbff,#f7fff9); color:#222; font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+.mood-card { display:flex; align-items:center; gap:12px; padding:12px; border-radius:12px; background: linear-gradient(90deg,#fff,#f8f9ff); box-shadow: 0 4px 10px rgba(0,0,0,0.04); }
+.mood-emoji{ font-size:34px; }
+.mood-text{ font-weight:600; color:#333; letter-spacing:0.6px; }
+.card { border: none; border-radius: 12px; }
+
+/* src/index.css */
+.btn-pink {
+  background-color: #f48fb1 !important;
+  border-color: #f48fb1 !important;
+  color: white !important;
+}
+
+.btn-outline-pink {
+  border-color: #d81b60 !important;
+  color: #d81b60 !important;
+}
+
+.btn-outline-pink:hover {
+  background-color: #f48fb1 !important;
+  color: white !important;
+}

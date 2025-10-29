@@ -1,0 +1,213 @@
+/* src/pages/JournalPage.css */
+
+/* Container & Backdrop */
+.journal-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #fdf2f8, #fce4ec); /* subtle, soft backdrop similar to Wall.js */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* Headings & subtitle */
+.journal-container h1 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+/* Toolbar & Mood selection */
+.toolbar {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.moods {
+  display: flex;
+  gap: 10px;
+}
+
+.moods span {
+  font-size: 26px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.moods span:hover {
+  transform: scale(1.2);
+  background-color: #f0f0f0;
+}
+
+.moods span.selected {
+  background-color: #ffe0f0;
+}
+
+/* Prompt box */
+.prompt {
+  background-color: #fff0f5; /* soft pinkish */
+  padding: 16px;
+  border-radius: 10px;
+  margin: 20px 0;
+  font-style: italic;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.05);
+}
+
+/* Textarea for journaling */
+textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 16px;
+  resize: vertical;
+  background: #fff;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Controls buttons */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #d81b60; /* project primary color */
+  color: white;
+  font-weight: 500;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #ad1457;
+  transform: translateY(-2px);
+}
+
+.btn.alt {
+  background-color: #8e8e93;
+}
+
+.btn.alt:hover {
+  background-color: #6b6b70;
+}
+
+/* Gratitude input */
+.gratitude-prompt input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+/* Entries list */
+.entries-list {
+  margin: 20px 0;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.entry-item {
+  border: 1px solid #eee;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.entry-item:hover {
+  transform: translateX(4px);
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.05);
+}
+
+/* Image preview */
+.image-preview {
+  margin: 20px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px dashed #ddd;
+  background-color: #fff;
+  text-align: center;
+}
+
+.image-preview img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Breathing indicator */
+.breathing-indicator {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 245, 250, 0.95);
+  padding: 24px;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+#breathingCircle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #d81b60;
+}
+
+/* Scrollbar styling for entries */
+.entries-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.entries-list::-webkit-scrollbar-thumb {
+  background-color: #d81b60;
+  border-radius: 4px;
+}
+
+.entries-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 820px) {
+  .journal-container {
+    padding: 15px;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+}
