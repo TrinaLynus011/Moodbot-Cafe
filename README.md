@@ -151,7 +151,7 @@ http://localhost:3000
 | ---------------------- | ------------- |
 | Live Application       | *To be added* |
 | GitHub Repository      | *https://github.com/TrinaLynus011/Moodbot-Cafe.git*|
-| Demo/Walkthrough Video | *To be added* |
+| Demo/Walkthrough Video | *https://youtu.be/nV6m32VNBu0* |
 
 ---
 
